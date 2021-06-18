@@ -7,7 +7,7 @@ mão.
 
 #### Login
 
-Para efetuar login no website terá de utilizar uma destas contas:
+Para efetuar login no website é necessário utilizar uma destas contas:
 
 - "mariana@gmail&#46;com" | "simaobentes"
 
