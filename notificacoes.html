@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Compra e venda de vestuário em segunda mão">
+    <meta name="keywords" content="roupa, sustentabilidade, vestuário, venda, troca, ambiente">
+    <meta name="author" content="Simão Bentes">
+    <meta name="apple-mobile-web-app-title" content="SecondHand">
+    <meta name="application-name" content="SecondHand">
+    <meta name="theme-color" content="#1c1c1e">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon/favicon-96x96.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Notificações | SecondHand</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top d-none d-md-block">
+    <div class="container">
+        <a class="navbar-brand secondhand mr-md-4" href="index.html?login=iniciado">SecondHand</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html?login=iniciado">Catálogo<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vender.html">Vender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html?login=iniciado">Sobre</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-conta" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-fluid mr-2 rounded-circle p-1 fotoperfilnavtop"
+                         src='imgs/sikvi.jpg' alt="">
+                    <span class="pr-3">Mariana Duarte</span>
+                </button>
+                <div class="dropdown-menu perfildrop" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#"><b>Histórico de compras</b></a>
+                    <a class="dropdown-item" href="conta.html"><b>Conta</b></a>
+                    <a class="dropdown-item" href="guardados.html"><b>Guardados</b></a>
+                    <hr>
+                    <a class="dropdown-item" href="index.html">Terminar Sessão</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main class="bg-light">
+    <section class="container pt-5 pb-3 text-pequeno">
+        <a class="text-desativo" href="conta.html">Conta</a>
+        <i class="fas fa-chevron-right px-2 iconedestivo"></i>
+        <span>Notificações</span>
+    </section>
+    <section class="container">
+        <h3>Notificações</h3>
+    </section>
+    <section class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h5 class="mb-1 mt-5">Mensagens</h5>
+                <p class="text-muted">Receba mensagens de anfitriões e hóspedes, incluindo pedidos de reserva.</p>
+                <div class="d-flex justify-content-between align-items-center">E-mail<input id="s1" type="checkbox"
+                                                                                            class="switch"
+                                                                                            checked=""></div>
+                <hr>
+                <div class="d-flex justify-content-between">Mensagens de Texto<input id="s2" type="checkbox"
+                                                                                     class="switch"></div>
+                <h5 class="mb-1 mt-5">Lembretes</h5>
+                <p class="text-muted">Receba lembretes de reserva, de pedidos para escrever um comentário, de
+                    notificações de preço, entre outros relacionados a suas atividades no Airbnb.</p>
+                <div class="d-flex justify-content-between align-items-center">E-mail<input id="s3" type="checkbox"
+                                                                                            class="switch"
+                                                                                            checked=""></div>
+                <hr>
+                <div class="d-flex justify-content-between">Mensagens de Texto<input id="s4" type="checkbox"
+                                                                                     class="switch"
+                                                                                     checked=""></div>
+                <h5 class="mb-1 mt-5">Promoções e dicas</h5>
+                <p class="text-muted">Receba cupons, promoções, questionários, novidades de produtos e inspiração do
+                    Airbnb e de seus parceiros.</p>
+                <div class="d-flex justify-content-between align-items-center">E-mail<input id="s5" type="checkbox"
+                                                                                            class="switch"></div>
+                <hr>
+                <div class="d-flex justify-content-between">Mensagens de Texto<input id="s6" type="checkbox"
+                                                                                     class="switch"></div>
+                <hr>
+                <div class="d-flex justify-content-between">Chamadas Telefónicas<input id="s7" type="checkbox"
+                                                                                       class="switch"
+                                                                                       checked=""></div>
+                <h5 class="mb-1 mt-5">Suporte para conta</h5>
+                <p class="text-muted">Receba mensagens sobre sua conta, suas viagens, notificações legais, questões de
+                    segurança e
+                    privacidade e solicitações de atendimento ao cliente. Para sua segurança, não permitimos que você
+                    desative as notificações por email e podemos entrar em contato com você por telefone ou outros
+                    meios, se necessário.</p>
+                <div class="d-flex justify-content-between align-items-center">E-mail<input id="s8" type="checkbox"
+                                                                                            class="switch" checked="">
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">Mensagens de Texto<input id="s9" type="checkbox"
+                                                                                     class="switch"></div>
+                <hr>
+
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="border-top">
+    <div class="container pt-4 py-md-5">
+        <div class="row">
+            <div class="col-md order-7 order-md-1">
+                <a href="sobre.html">
+                    <div class="secondhandfooter text-center text-md-left mb-2">SecondHand</div>
+                </a>
+                <small class="d-block mb-3 text-muted text-center text-md-left">© 2020 Todos os direitos
+                    reservados.</small>
+            </div>
+            <div class="col-md order-1 order-md-2 text-center text-md-left">
+                <h6>Morada</h6>
+                <ul class="list-unstyled text-small text-muted">
+                    <li>Rua António da Benta, 8</li>
+                    <li>3800-250 Aveiro</li>
+                </ul>
+            </div>
+            <div class="col-md order-2 order-md-3 text-center text-md-left">
+                <h6>Contactos</h6>
+                <ul class="list-unstyled text-small text-muted">
+                    <li>geral@secondhand.com</li>
+                    <li><a href="tel:00351284549238">218 948 384</a></li>
+                    <li><a href="tel:00351963560624">964 839 094</a></li>
+                </ul>
+            </div>
+            <div class="col-md order-3 order-md-5 text-center text-md-left">
+                <h6>Siga-nos</h6>
+                <div class="redessociais mt-3 mt-md-4 mt-md-0 mb-2 text-center">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook iconeredes mr-3"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram iconeredes mr-3"></i>
+                    </a>
+                    <a href="https://twitter.com/search?q=%23secondhand" target="_blank">
+                        <i class="fab fa-twitter iconeredes"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<nav class="container-fluid fixed-bottom navbar-light menubottom justify-content-center d-md-none">
+    <div class="row h-100 align-items-center text-center">
+        <a class="col px-1" href="index.html?login=iniciado">
+            <img src="imgs/shativo.svg" class="iconsh iconshativo" alt="">
+            <div class="w-100 item-menu">SecondHand</div>
+        </a>
+        <a class="col px-1" href="catalogo.html?login=iniciado">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <div class="w-100 item-menu">Catálogo</div>
+        </a>
+        <a class="col px-1" href="vender.html">
+            <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+            <div class="w-100 item-menu">Vender</div>
+        </a>
+        <a class="col px-1" href="sobre.html?login=iniciado">
+            <i class="fas fa-fingerprint fa-2x"></i>
+            <div class="w-100 item-menu">Sobre</div>
+        </a>
+        <a class="col px-1" href="conta.html">
+            <img class="rounded-circle fotoperfilnav" src="imgs/sikvi.jpg" alt="">
+            <div class="w-100 item-menu">Mariana</div>
+        </a>
+    </div>
+</nav>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/codigo.js"></script>
+</body>
+</html>

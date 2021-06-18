@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Compra e venda de vestuário em segunda mão">
+    <meta name="keywords" content="roupa, sustentabilidade, vestuário, venda, troca, ambiente">
+    <meta name="author" content="Simão Bentes">
+    <meta name="apple-mobile-web-app-title" content="SecondHand">
+    <meta name="application-name" content="SecondHand">
+    <meta name="theme-color" content="#1c1c1e">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon/favicon-96x96.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Login | SecondHand</title>
+</head>
+<body>
+<section class="container-fluid login">
+    <div class="row">
+
+        <div class="col-md-5 loginesq">
+            <div class="logincontainer mt-5">
+                <a class="secondhand mb-5" href="index.html">SecondHand®</a>
+                <h2 class="mb-5 font-weight-normal">Bem-vindo de volta</h2>
+            </div>
+            <form class="form-signin" action="index.html?login=correto">
+                <label for="username" class="sr-only">Email address</label>
+                <input class="form-control loginform" type="text" id="username"
+                       placeholder="Telemóvel, e-mail ou username">
+                <label for="password" class="sr-only">Password</label>
+                <input class="form-control loginform" type="password" id="password" placeholder="Password">
+                <div class="checkbox mb-3 checkbola">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Lembrar-me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="button" onclick="getInfo()">Iniciar sessão</button>
+                <hr class="my-4">
+                <a class="btn btn-block btn-facebook text-center py-3" href="https://www.facebook.com/"><i
+                        class="fab fa-facebook mr-2"></i>Iniciar sessão com o Facebook</a>
+            </form>
+            <div class="logincontainer loginfrase mt-2">
+                <p>Ainda não é membro? <a href="registar.html">Criar Conta</a></p>
+            </div>
+        </div>
+        <div class="col-md-7 fotologin d-none d-md-block"></div>
+    </div>
+</section>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/codigo.js"></script>
+<script>
+    // Loop through Array of Objects
+    var objPeople = [
+        { // Object @ 0 index
+            username: "mariana@gmail.com",
+            password: "simaobentes"
+        },
+        { // Object @ 1 index
+            username: "963560624",
+            password: "aveiro"
+        },
+        { // Object @ 2 index
+            username: "simao@gmail.com",
+            password: "caixinha"
+        }
+
+    ]
+
+    function getInfo() {
+        var username = document.getElementById('username').value
+        var password = document.getElementById('password').value
+
+        for (var i = 0; i < objPeople.length; i++) {
+            // check is user input matches username and password of a current index of the objPeople array
+            if (username == objPeople[i].username && password == objPeople[i].password) {
+                window.location = "index.html?login=iniciado";
+                // stop the function if this is found to be true
+                return
+            }
+        }
+        alert("E-mail ou Palavra-Passe incorretos, tente novamente.")
+    }
+</script>
+</body>
+</html>

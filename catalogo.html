@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Compra e venda de vestuário em segunda mão">
+    <meta name="keywords" content="roupa, sustentabilidade, vestuário, venda, troca, ambiente">
+    <meta name="author" content="Simão Bentes">
+    <meta name="apple-mobile-web-app-title" content="SecondHand">
+    <meta name="application-name" content="SecondHand">
+    <meta name="theme-color" content="#1c1c1e">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon/favicon-96x96.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Catálogo | SecondHand</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom fixed-top d-none d-md-block">
+    <div class="container">
+        <a id="indexLogin" class="navbar-brand secondhand mr-md-4" href="index.html">SecondHand</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a id="catalogoLogin" class="nav-link" href="catalogo.html">Catálogo<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li id="vender" class="nav-item d-none">
+                    <a class="nav-link" href="vender.html">Vender</a>
+                </li>
+                <li class="nav-item">
+                    <a id="sobreLogin" class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+            </ul>
+            <a id="entrar" href="login.html">
+                <div class="btn btn-conta px-3 py-2">Iniciar Sessão</div>
+            </a>
+            <div id="perfil" class="dropdown d-none">
+                <button class="btn btn-conta" type="button" id="dropdownConta"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-fluid mr-2 rounded-circle p-1 fotoperfilnavtop"
+                         src='imgs/sikvi.jpg' alt="">
+                    <span class="pr-3">Mariana Duarte</span>
+                </button>
+                <div class="dropdown-menu perfildrop" aria-labelledby="dropdownConta">
+                    <a class="dropdown-item" href="#"><b>Histórico de compras</b></a>
+                    <a class="dropdown-item" href="conta.html"><b>Conta</b></a>
+                    <a class="dropdown-item" href="guardados.html"><b>Guardados</b></a>
+                    <hr>
+                    <a class="dropdown-item" href="index.html">Terminar Sessão</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main class="bg-light">
+    <section class="container-fluid meucontainer">
+        <div class="row no-gutters justify-content-between">
+            <!-- FILTROS -->
+            <div class="col-md-2 pt-5 pr-0 filtro bg-light">
+                <button class="btn d-md-none" type="button" data-toggle="collapse" data-target="#example-collapse">
+                    <span class="navbar-light"><span class="h5 font-weight-bold border-bottom">FILTRO</span></span>
+                </button>
+
+                <div id="example-collapse" class="collapse d-md-block">
+                    <div id="accordion">
+                        <a class="text-dark font-weight-bold" data-toggle="collapse" href="#collapseExample"
+                           role="button" aria-expanded="true" aria-controls="collapseExample">
+                            <h4 class="pl-3 pl-md-2 py-2">Género</h4>
+                        </a>
+                        <div class="collapse pl-3 pl-md-2" id="collapseExample">
+                            <div>
+                                <uL class="list-unstyled">
+                                    <li class="checkbola">
+                                        <input id="c11" type="checkbox">
+                                        <label for="c11">Feminino</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c12" type="checkbox">
+                                        <label for="c12">Masculino</label>
+                                    </li>
+                                </uL>
+                            </div>
+                        </div>
+                        <a class="text-dark font-weight-bold" data-toggle="collapse" href="#collapseExample2"
+                           role="button" aria-expanded="true" aria-controls="collapseExample2">
+                            <h4 class="pl-3 pl-md-2 py-2">Categoria</h4>
+                        </a>
+                        <div class="collapse pl-3 pl-md-2" id="collapseExample2">
+                            <div>
+                                <uL class="list-unstyled">
+                                    <li class="checkbola">
+                                        <input id="c21" type="checkbox">
+                                        <label for="c21">Calças</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c22" type="checkbox">
+                                        <label for="c22">Camisas</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c23" type="checkbox">
+                                        <label for="c23">Camisolas</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c24" type="checkbox">
+                                        <label for="c24">Casacos</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c25" type="checkbox">
+                                        <label for="c25">Coletes</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c26" type="checkbox">
+                                        <label for="c26">Fatos de Treino</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c27" type="checkbox">
+                                        <label for="c27">Pólos</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c28" type="checkbox">
+                                        <label for="c28">T-Shirts</label>
+                                    </li>
+                                </uL>
+                            </div>
+                        </div>
+                        <a class="text-dark font-weight-bold" data-toggle="collapse" href="#collapseExample3"
+                           role="button" aria-expanded="true" aria-controls="collapseExample3">
+                            <h4 class="pl-3 pl-md-2 py-2">Tamanho</h4>
+                        </a>
+                        <div class="collapse pl-3 pl-md-2" id="collapseExample3">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="checkbola">
+                                        <input id="c33" type="checkbox">
+                                        <label for="c33">XS</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c34" type="checkbox">
+                                        <label for="c34">S</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c35" type="checkbox">
+                                        <label for="c35">M</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c36" type="checkbox">
+                                        <label for="c36">L</label>
+                                    </li>
+                                    <li class="checkbola">
+                                        <input id="c37" type="checkbox">
+                                        <label for="c37">XL</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="text-dark font-weight-bold" data-toggle="collapse" href="#collapseExample4"
+                           role="button" aria-expanded="true" aria-controls="collapseExample4">
+                            <h4 class="pl-3 pl-md-2 py-2">Cor</h4>
+                        </a>
+                        <div class="collapse" id="collapseExample4">
+                            <div class="row no-gutters bolascor">
+                                <div class="col-4 mb-3x">
+                                    <div id="corbola1"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Vermelho</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola2"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Verde</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola3"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Amarelo</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola4"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Laranja</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola5"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Preto</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola6"
+                                         class="corbolabranca d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Branco</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola7"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Roxo</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola8"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Cinzento</div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                    <div id="corbola9"
+                                         class="corbola d-flex justify-content-center align-items-center m-auto"></div>
+                                    <div class="w-100 item-menu text-center">Rosa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 pt-3 pt-md-5">
+                <div>
+                    <div class="row justify-content-between">
+                        <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                            <input type="text" id="search-bar" class="form-control forminfo barrapesquisa"
+                                   placeholder="Pesquisar">
+                            <i class="fas fa-search search-icon iconedegrade"></i>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                            <select class="form-control form-control-sm forminfo">
+                                <option selected disabled>Ordenar por:</option>
+                                <option>Preço Ascendete</option>
+                                <option>Preço Descendente</option>
+                                <option>Alfabética A-Z</option>
+                                <option>Alfabética Z-A</option>
+                                <option>Os mais recentes</option>
+                                <option>Os mais vendidos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <!-- GRID COM CARDS DO PRODUTOS -->
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 mb-5">
+                        <div class="card h-100">
+
+                            <a href="#">
+                                <img src="imgs/nike.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">T-Shirt<span
+                                                class="badge badge-primary ml-2">L</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Nike Virgil
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">9,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-5">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/thedoors.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">T-Shirt<span
+                                                class="badge badge-primary ml-2">XL</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                The Doors
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">9,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar2" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-5">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/calcacarhatt.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Calças<span
+                                                class="badge badge-primary ml-2">42</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Carhartt
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">16,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar3" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-5">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/calcaverde.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Calças<span
+                                                class="badge badge-primary ml-2">38</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Cargo Verde
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">12,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar4" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-5">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/brakingbad.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">T-Shirt<span
+                                                class="badge badge-primary ml-2">M</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Breaking Bad
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">4,50€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar1" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-5">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/calcanike.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Calças<span
+                                                class="badge badge-primary ml-2">XL</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Nike
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">13,50€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar5" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/casacogange.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Casaco<span
+                                                class="badge badge-primary ml-2">XL</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Ganga
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">11,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar6" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/calcaocinza.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Calção<span
+                                                class="badge badge-primary ml-2">40</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Cinzento
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">9,50€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar7" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/sweatdisney.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Sweatshirt<span
+                                                class="badge badge-primary ml-2">XL</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Long Sleeve
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">15,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar8" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/champion.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Calções<span
+                                                class="badge badge-primary ml-2">38</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Champion
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">14,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar9" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/sweatshirt.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Sweatshirt<span
+                                                class="badge badge-primary ml-2">S</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Virgil-Abloh
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">22,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar10" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-3">
+                        <div class="card h-100">
+                            <a href="#">
+                                <img src="imgs/calcaganga.jpg" class="card-img-top" alt="Produto">
+                            </a>
+                            <div class="card-body px-2 pb-2 pt-4 ">
+                                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="text-pequeno mb-1">Calças<span
+                                                class="badge badge-primary ml-2">42</span></div>
+                                        <p class="mb-0 h5">
+                                            <strong>
+                                                Ganga Skinny
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <p class="h3 text-right mb-0">15,90€</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col px-0">
+                                        <button class="btn btn-degrade btn-block h-100 text-uppercase">
+                                            Comprar
+                                            <i class="fa fa-angle-right pl-1" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ml-2">
+                                            <span class="btn text-black-50 rounded-circle">
+                                                <i id="adicionar11" class="fa fa-heart fa-2x"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!--MUDAR PAGINA-->
+                <section class="float-right py-3">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="border-top">
+    <div class="container pt-4 py-md-5">
+        <div class="row">
+            <div class="col-md order-7 order-md-1">
+                <a href="sobre.html">
+                    <div class="secondhandfooter text-center text-md-left mb-2">SecondHand</div>
+                </a>
+                <small class="d-block mb-3 text-muted text-center text-md-left">© 2020 Todos os direitos
+                    reservados.</small>
+            </div>
+            <div class="col-md order-1 order-md-2 text-center text-md-left">
+                <h6>Morada</h6>
+                <ul class="list-unstyled text-small text-muted">
+                    <li>Rua António da Benta, 8</li>
+                    <li>3800-250 Aveiro</li>
+                </ul>
+            </div>
+            <div class="col-md order-2 order-md-3 text-center text-md-left">
+                <h6>Contactos</h6>
+                <ul class="list-unstyled text-small text-muted">
+                    <li>geral@secondhand.com</li>
+                    <li><a href="tel:00351284549238">218 948 384</a></li>
+                    <li><a href="tel:00351963560624">964 839 094</a></li>
+                </ul>
+            </div>
+            <div class="col-md order-3 order-md-5 text-center text-md-left">
+                <h6>Siga-nos</h6>
+                <div class="redessociais mt-3 mt-md-4 mt-md-0 mb-2 text-center">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook iconeredes mr-3"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram iconeredes mr-3"></i>
+                    </a>
+                    <a href="https://twitter.com/search?q=%23secondhand" target="_blank">
+                        <i class="fab fa-twitter iconeredes"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<nav class="container-fluid fixed-bottom navbar-light menubottom justify-content-center d-md-none">
+    <div class="row h-100 align-items-center text-center">
+        <a id="indexnavbottom" class="col px-1" href="index.html">
+            <img src="imgs/sh.svg" class="iconsh" alt="">
+            <div class="w-100 item-menu">SecondHand</div>
+        </a>
+        <a id="catalogonavbottom" class="col px-1" href="catalogo.html">
+            <i class="fas fa-shopping-bag fa-2x iconedegrade"></i>
+            <div class="w-100 item-menu">Catálogo</div>
+        </a>
+        <a id="vendernavbottom" class="col px-1 d-none" href="vender.html">
+            <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+            <div class="w-100 item-menu">Vender</div>
+        </a>
+        <a id="sobrenavbottom" class="col px-1" href="sobre.html">
+            <i class="fas fa-fingerprint fa-2x"></i>
+            <div class="w-100 item-menu">Sobre</div>
+        </a>
+        <a id="contanavbottom" class="col px-1 d-none" href="conta.html">
+            <img class="rounded-circle fotoperfilnav" src="imgs/sikvi.jpg" alt="">
+            <div class="w-100 item-menu">Mariana</div>
+        </a>
+        <a id="loginnavbottom" class="col pl-0 pr-1" href="login.html">
+            <i class="fas fa-user-circle fa-2x"></i>
+            <div class="w-100 item-menu">Iniciar Sessão</div>
+        </a>
+    </div>
+</nav>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/codigo.js"></script>
+<script>
+
+
+    $('#adicionar').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+
+    $('#adicionar1').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+
+    $('#adicionar2').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+
+    $('#adicionar3').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+
+    $('#adicionar4').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+
+    $('#adicionar5').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+    $('#adicionar6').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+    $('#adicionar7').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+    $('#adicionar8').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+    $('#adicionar9').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+    $('#adicionar10').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+    $('#adicionar11').click(function () {
+        $(this).toggleClass("iconedegrade");
+    });
+
+    $('.corbola').click(function () {
+        $(this).toggleClass("corbolaclicado");
+        $(this).html(function (i, v) {
+            return v === '<i class="fas fa-check text-white"></i>' ? '<i></i>' : '<i class="fas fa-check text-white"></i>'
+        })
+    });
+    $('.corbolabranca').click(function () {
+        $(this).toggleClass("corbolaclicado");
+        $(this).html(function (i, v) {
+            return v === '<i class="fas fa-check text-dark"></i>' ? '<i></i>' : '<i class="fas fa-check text-dark"></i>'
+        })
+    });
+
+
+</script>
+</body>
+</html>

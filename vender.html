@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Compra e venda de vestuário em segunda mão">
+    <meta name="keywords" content="roupa, sustentabilidade, vestuário, venda, troca, ambiente">
+    <meta name="author" content="Simão Bentes">
+    <meta name="apple-mobile-web-app-title" content="SecondHand">
+    <meta name="application-name" content="SecondHand">
+    <meta name="theme-color" content="#1c1c1e">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon/favicon-96x96.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>SecondHand</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top d-none d-md-block">
+    <div class="container">
+        <a class="navbar-brand secondhand mr-md-4" href="index.html?login=iniciado">SecondHand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html?login=iniciado">Catálogo<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vender.html">Vender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html?login=iniciado">Sobre</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-conta" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-fluid mr-2 rounded-circle p-1 fotoperfilnavtop"
+                         src='imgs/sikvi.jpg' alt="">
+                    <span class="pr-3">Mariana Duarte</span>
+                </button>
+                <div class="dropdown-menu perfildrop" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#"><b>Histórico de compras</b></a>
+                    <a class="dropdown-item" href="conta.html"><b>Conta</b></a>
+                    <a class="dropdown-item" href="guardados.html"><b>Guardados</b></a>
+                    <hr>
+                    <a class="dropdown-item" href="index.html">Terminar Sessão</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main class="bg-light">
+    <section class="container py-5">
+        <h3 class="pb-5">Vender</h3>
+        <!-- FORM VENDER-->
+        <form id="formReserva">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <div class="form-group">
+                        <label for="titulo">Título do anúncio</label>
+                        <input type="text" class="form-control forminfo" id="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTipo">Tipo de Roupa</label>
+                        <select id="inputTipo" class="form-control forminfo" required>
+                            <option selected disabled></option>
+                            <option>Sweatshirts</option>
+                            <option>T-shirts</option>
+                            <option>Jeans</option>
+                            <option>Calças</option>
+                            <option>Bermudas</option>
+                            <option>Casacos e Blusões</option>
+                            <option>Blusões de ganga</option>
+                            <option>Camisas</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="tamanhoroupa">Tamanho</label>
+                            <select id="tamanhoroupa" class="form-control forminfo" required>
+                                <option selected disabled></option>
+                                <option>XXS</option>
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                                <option>XXL</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="inputMarca">Marca</label>
+                            <input type="text" class="form-control forminfo" id="inputMarca" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="estadoRoupa">Estado</label>
+                        <select id="estadoRoupa" class="form-control forminfo" required>
+                            <option selected disabled></option>
+                            <option>Novo</option>
+                            <option>Poucos sinais de uso</option>
+                            <option>Usado</option>
+                            <option>Muito Usado</option>
+                        </select>
+                    </div>
+                    <hr class="my-5">
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="telemovel">Número de Telefone</label>
+                            <input type="tel" id="telemovel" class="form-control forminfo" required>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="inputCity">Cidade</label>
+                            <input type="text" class="form-control forminfo" id="inputCity" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="upfoto">Carregar Fotos</label>
+                        <div id="upfoto" class="uploadfoto position-relative">
+                            <label for="avatar" class="botaoupfoto">
+                                <i class="fas fa-camera iconedegrade"></i>
+                            </label>
+                            <input type="file"
+                                   id="avatar" name="avatar"
+                                   accept="image/png, image/jpeg">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group pt-3">
+                            <label for="descricao">Descrição</label>
+                            <textarea class="form-control forminfo" id="descricao" rows="6" required></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <div class="form-check checkbola pl-2">
+                            <input id="myCheck" class="form-check-input" type="checkbox" required>
+                            <span class="text-pequeno">
+                            Concordo com o tratamento de dados seguindo os <b>Termos e Condições</b> da SecondHand,
+                            que se regem pelo Regulamento Geral da Proteção de Dados
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <button type="submit" value="Submit" class="btn btn-inform btn-block">
+                        PUBLICAR
+                    </button>
+                </div>
+            </div>
+        </form>
+        <!-- Modal -->
+        <section class="modal fade" id="modalEstaCertooo" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content p-0">
+                    <div class="modal-body text-center text-dark">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="my-4">Roupa carregada com sucesso.</h5>
+                        <i class="fas fa-check-circle fa-5x iconedegrade"></i>
+                        <p class="py-3 m-0">Verifique a sua caixa de correio para informação detalhada do
+                            processo.</p>
+                    </div>
+                    <div class="modal-footer p-0">
+                        <a type="button" class="btn botaomodal py-3 m-0 btn-block"
+                                href="vender.html">CONTINUAR
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+<footer class="border-top">
+    <div class="container pt-4 py-md-5">
+        <div class="row">
+            <div class="col-md order-7 order-md-1">
+                <a href="sobre.html">
+                    <div class="secondhandfooter text-center text-md-left mb-2">SecondHand</div>
+                </a>
+                <small class="d-block mb-3 text-muted text-center text-md-left">© 2020 Todos os direitos
+                    reservados.</small>
+            </div>
+            <div class="col-md order-1 order-md-2 text-center text-md-left">
+                <h6>Morada</h6>
+                <ul class="list-unstyled text-small text-muted">
+                    <li>Rua António da Benta, 8</li>
+                    <li>3800-250 Aveiro</li>
+                </ul>
+            </div>
+            <div class="col-md order-2 order-md-3 text-center text-md-left">
+                <h6>Contactos</h6>
+                <ul class="list-unstyled text-small text-muted">
+                    <li>geral@secondhand.com</li>
+                    <li><a href="tel:00351284549238">218 948 384</a></li>
+                    <li><a href="tel:00351963560624">964 839 094</a></li>
+                </ul>
+            </div>
+            <div class="col-md order-3 order-md-5 text-center text-md-left">
+                <h6>Siga-nos</h6>
+                <div class="redessociais mt-3 mt-md-4 mt-md-0 mb-2 text-center">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook iconeredes mr-3"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram iconeredes mr-3"></i>
+                    </a>
+                    <a href="https://twitter.com/search?q=%23secondhand" target="_blank">
+                        <i class="fab fa-twitter iconeredes"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<nav class="container-fluid fixed-bottom navbar-light menubottom justify-content-center d-md-none">
+    <div class="row h-100 align-items-center text-center">
+        <a class="col px-1" href="index.html?login=iniciado">
+            <img src="imgs/sh.svg" class="iconsh iconshativo" alt="">
+            <div class="w-100 item-menu">SecondHand</div>
+        </a>
+        <a class="col px-1" href="catalogo.html?login=iniciado">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <div class="w-100 item-menu">Catálogo</div>
+        </a>
+        <a class="col px-1" href="vender.html">
+            <i class="fas fa-arrow-alt-circle-up fa-2x iconedegrade"></i>
+            <div class="w-100 item-menu">Vender</div>
+        </a>
+        <a class="col px-1" href="sobre.html?login=iniciado">
+            <i class="fas fa-fingerprint fa-2x"></i>
+            <div class="w-100 item-menu">Sobre</div>
+        </a>
+        <a class="col px-1" href="conta.html">
+            <img class="rounded-circle fotoperfilnav" src="imgs/sikvi.jpg" alt="">
+            <div class="w-100 item-menu">Mariana</div>
+        </a>
+    </div>
+</nav>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/codigo.js"></script>
+</body>
+</html>
