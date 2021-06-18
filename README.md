@@ -9,8 +9,8 @@ mão.
 
 Para efetuar login no website é necessário utilizar uma destas contas:
 
-- "mariana@gmail&#46;com" | "simaobentes"
+- "mariana@&#65279;gmail.com" | "simaobentes"
 
 - "963560624" | "aveiro"
 
-- "simao@gmail&#46;com" | "caixinha"
+- "simao@&#65279;gmail.com" | "caixinha"
