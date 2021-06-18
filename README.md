@@ -13,4 +13,4 @@ Para efetuar login no website terá de utilizar uma destas contas:
 
 - "963560624" | "aveiro"
 
-- a"simao@gmail.com" | "caixinha"
+- "simao@gmail.com" | "caixinha"
